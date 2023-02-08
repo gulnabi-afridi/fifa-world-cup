@@ -7,14 +7,12 @@ import EastIcon from "@mui/icons-material/East";
 import PrimaryButton from "../common/PrimaryButton";
 import Router, { useRouter } from "next/router";
 
-
 const Register: React.FC = () => {
-
   const Router = useRouter();
 
-  const Navigate = () =>{
-     Router.push("/new-group");
-  }
+  const Navigate = () => {
+    Router.push("/new-group");
+  };
 
   return (
     <Box
@@ -22,10 +20,11 @@ const Register: React.FC = () => {
         width: "100vw",
         minHeight: "100vh",
         display: "flex",
-        background: "#1E1E1E",
+        background: "black",
         justifyContent: "center",
         alignItems: "center",
-        py: 6,
+        py: 4,
+        px: { sm: 0, xs: 1 },
       }}
     >
       <Box
@@ -37,6 +36,8 @@ const Register: React.FC = () => {
           p: "6px",
           borderRadius: "30px",
           position: "relative",
+          borderTop: "2px solid #B3D355 ",
+          borderBottom: "2px solid #B3D355",
         }}
       >
         <Box
@@ -114,7 +115,7 @@ const Register: React.FC = () => {
             {/* =========>next button */}
             <Box sx={{ my: 6, width: "100%" }}>
               <PrimaryButton
-                navigate = {Navigate}
+                navigate={Navigate}
                 title="Next"
                 paddLeft={7}
                 paddRight={4}

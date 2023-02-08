@@ -4,19 +4,18 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-
 const PreviewMatch: React.FC = () => {
   return (
     <Box
       sx={{
         width: "100%",
-        display: "flex",
-        justifyContent: "space-between",
+        display:"grid",
+        gridTemplateColumns:"1fr 1fr 1fr",
+        justifyContent:"center", 
         alignItems: "center",
         background: "#353535",
         borderRadius: "15px",
         position: "relative",
-
         px: 4,
         py: 2,
       }}
@@ -24,17 +23,17 @@ const PreviewMatch: React.FC = () => {
       {/* ====>one team */}
       <Box
         sx={{
+          height:"100%",
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           flexDirection: "column",
-          gap: 1,
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <Image
-          src="/Assets/team1.svg"
-          width={50}
-          height={60}
+          src="/Assets/team/team4.svg"
+          width={68}
+          height={80}
           alt="team one"
         ></Image>
         <Typography
@@ -51,11 +50,11 @@ const PreviewMatch: React.FC = () => {
       {/* =====>score */}
       <Box
         sx={{
+          height:"100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
-          gap: 1,
         }}
       >
         <Box
@@ -64,6 +63,8 @@ const PreviewMatch: React.FC = () => {
             gap: 1,
             justifyContent: "center",
             alignItems: "center",
+            mt:4,
+            
           }}
         >
           <Typography
@@ -115,13 +116,12 @@ const PreviewMatch: React.FC = () => {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          gap: 1,
         }}
       >
         <Image
-          src="/Assets/team2.svg"
-          width={50}
-          height={60}
+          src="/Assets/team/team3.svg"
+          width={68}
+          height={80}
           alt="team one"
         ></Image>
         <Typography
@@ -222,7 +222,6 @@ const PreviewMatch: React.FC = () => {
           pt
         </Typography>
       </Box>
-
     </Box>
   );
 };

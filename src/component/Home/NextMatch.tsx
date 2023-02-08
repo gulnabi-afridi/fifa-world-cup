@@ -2,7 +2,6 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import RemoveIcon from "@mui/icons-material/Remove";
 
 const NextMatch: React.FC = () => {
   return (
@@ -29,9 +28,9 @@ const NextMatch: React.FC = () => {
         }}
       >
         <Image
-          src="/Assets/team1.svg"
-          width={50}
-          height={60}
+          src="/Assets/team/team1.svg"
+          width={68}
+          height={80}
           alt="team one"
         ></Image>
         <Typography
@@ -68,12 +67,13 @@ const NextMatch: React.FC = () => {
           <input
             className="scoreInput"
             style={{
-              height: "40px",
-              width: "40px",
+              height: "50px",
+              width: "50px",
               paddingLeft: "2px",
               fontFamily: "Inter, sans-serif",
               fontSize: "14px",
               fontWeight: "500",
+              marginTop: "12px",
             }}
             type="text"
             id="first"
@@ -104,7 +104,19 @@ const NextMatch: React.FC = () => {
             flexDirection: "column",
           }}
         >
-          <RemoveIcon sx={{ color: "#353535", mt: 1.5 }} />
+          {/* <RemoveIcon sx={{ color: "#353535", mt: 3.5 ,fontWeight:"800"}} />
+           */}
+          <Typography
+            sx={{
+              fontSize: "36px",
+              fontWeight: "600",
+              fontFamily: "Inter,sans-serif",
+              color: "#353535",
+              mt: 1,
+            }}
+          >
+            -
+          </Typography>
           <Typography
             sx={{
               fontSize: "14px",
@@ -133,12 +145,13 @@ const NextMatch: React.FC = () => {
           <input
             className="scoreInput"
             style={{
-              height: "40px",
-              width: "40px",
+              height: "50px",
+              width: "50px",
               paddingLeft: "2px",
               fontFamily: "Inter, sans-serif",
               fontSize: "14px",
               fontWeight: "500",
+              marginTop: "12px",
             }}
             type="text"
             id="first"
@@ -171,9 +184,9 @@ const NextMatch: React.FC = () => {
         }}
       >
         <Image
-          src="/Assets/team2.svg"
-          width={50}
-          height={60}
+          src="/Assets/team/team2.svg"
+          width={68}
+          height={80}
           alt="team one"
         ></Image>
         <Typography

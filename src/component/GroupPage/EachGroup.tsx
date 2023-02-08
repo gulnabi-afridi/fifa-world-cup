@@ -22,11 +22,11 @@ const EachGroup: React.FC<props> = ({ image, groupName, member }: props) => {
       <Box
         sx={{
           width: "100%",
-          height: "120px",
+          height: "130px",
           position: "relative",
           "& img": {
-            borderTopLeftRadius: "10px",
-            borderTopRightRadius: "10px",
+            borderTopLeftRadius: "16px",
+            borderTopRightRadius: "16px",
           },
         }}
       >

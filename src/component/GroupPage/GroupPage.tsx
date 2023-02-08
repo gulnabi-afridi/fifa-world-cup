@@ -11,27 +11,27 @@ const GroupPage: React.FC = () => {
   const [Group_Member, Set_Group_Member] = useState(19);
   const Router = useRouter();
 
-// ======>functions
+  // ======>functions
 
-   const Naviagte = () =>{
+  const Naviagte = () => {
     Router.push("/create-group");
-   }
+  };
 
   // ========> groups data object
 
   const groups = [
     {
-      image: "/Assets/group4.jpg",
+      image: "/Assets/group/group5.png",
       groupName: "“The Kings”",
       groupMember: Group_Member,
     },
     {
-      image: "/Assets/group3.jpg",
+      image: "/Assets/group/group6.png",
       groupName: "“Lenooobos”",
       groupMember: Group_Member,
     },
     {
-      image: "/Assets/group5.jpg",
+      image: "/Assets/group/group7.png",
       groupName: "“Quadoxs”",
       groupMember: Group_Member,
     },
@@ -42,11 +42,12 @@ const GroupPage: React.FC = () => {
       sx={{
         width: "100vw",
         minHeight: "100vh",
-        py: 8,
         display: "flex",
-        background: "#1E1E1E",
+        background: "black",
         justifyContent: "center",
         alignItems: "center",
+        py: 4,
+        px: { sm: 0, xs: 2 },
       }}
     >
       <Box
@@ -68,7 +69,7 @@ const GroupPage: React.FC = () => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "30px",
-            p: 4,
+            p: 3,
             py: 8,
             background:
               "linear-gradient(180deg, #110F72 0%, #2B2A81 82.99%, #444291 100%)",

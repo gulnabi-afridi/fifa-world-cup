@@ -13,12 +13,13 @@
   border: none !important;
 }
 .MuiInputBase-root::before {
-  border-bottom: 2px solid black !important;
+  border-bottom: 1px solid black !important;
 }
 
 /* Home global css  */
 .scoreInput:focus {
-  outline: 1px solid #7314be;
+  outline: 2px solid #7314be;
+  border: none;
 }
 .scoreInput {
   border: 2px solid #c0c0c0;

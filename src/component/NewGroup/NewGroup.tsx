@@ -5,24 +5,24 @@ import { Typography, useRadioGroup } from "@mui/material";
 import PrimaryButton from "../common/PrimaryButton";
 import Router, { useRouter } from "next/router";
 
-
 const NewGroup: React.FC = () => {
-
   const Router = useRouter();
 
-  const Navigate = () =>{
+  const Navigate = () => {
     Router.push("/group-page");
-  }
+  };
 
   return (
     <Box
       sx={{
         width: "100vw",
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
-        background: "#1E1E1E",
+        background: "black",
         justifyContent: "center",
         alignItems: "center",
+        py: 4,
+        px: { sm: 0, xs: 2 },
       }}
     >
       <Box
@@ -44,8 +44,9 @@ const NewGroup: React.FC = () => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "30px",
-            p: 4,
+            p: 3,
             py: 8,
+            boxShadow: 4,
             background:
               "linear-gradient(180deg, #110F72 0%, #2B2A81 82.99%, #444291 100%)",
           }}
@@ -55,7 +56,7 @@ const NewGroup: React.FC = () => {
               fontFamily: "Inter, sans-serif",
               color: "white",
               fontSize: "30px",
-              fontWeight:"600",
+              fontWeight: "600",
               textTransform: "uppercase",
               textAlign: "center",
 
@@ -80,7 +81,7 @@ const NewGroup: React.FC = () => {
               background: "white",
               borderRadius: "25px",
               display: "flex",
-              mt:4,
+              mt: 4,
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
@@ -113,7 +114,7 @@ const NewGroup: React.FC = () => {
               its look like you dont have groups yet
             </Typography>
             {/* =========>next button */}
-            <Box sx={{ my: 6, width: "100%",paddingX:3, }}>
+            <Box sx={{ my: 6, width: "100%", paddingX: 3 }}>
               <PrimaryButton
                 navigate={Navigate}
                 title="New Group"

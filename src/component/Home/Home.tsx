@@ -13,10 +13,12 @@ const Home: React.FC = () => {
         width: "100vw",
         minHeight: "100vh",
         display: "flex",
-        background: "#1E1E1E",
+        // background: "#1E1E1E",
+        background: "black",
         justifyContent: "center",
         alignItems: "center",
         py: 4,
+        px: { sm: 0, xs: 1 },
       }}
     >
       <Box
@@ -45,14 +47,14 @@ const Home: React.FC = () => {
           {/* ======>image */}
           <Box
             sx={{
-              width: "220px",
-              height: "90px",
+              width: "246px",
+              height: "95px",
               position: "relative",
               my: 4,
             }}
           >
             <Image
-              src="/Assets/premierLeague.png"
+              src="/Assets/premierLeague.svg"
               fill
               alt="premier league image"
               className="cover"
@@ -128,10 +130,11 @@ const Home: React.FC = () => {
             }}
           >
             <Image
-              src="/Assets/winner.png"
-              width={20}
-              height={20}
+              src="/Assets/premierLeagueSmalImage.svg"
+              width={28}
+              height={28}
               alt="winner-image"
+              className="cover"
             ></Image>
             <Typography
               sx={{
@@ -179,9 +182,9 @@ const Home: React.FC = () => {
               }}
             >
               <Image
-                src="/Assets/winnerTeam.png"
-                width={50}
-                height={50}
+                src="/Assets/team/winnerTeam.svg"
+                width={55}
+                height={55}
                 className="cover"
                 alt="winner team image"
               ></Image>
@@ -201,6 +204,7 @@ const Home: React.FC = () => {
         {/* ==========> Preview Matches */}
         <Box
           sx={{
+            height: "100%",
             width: "100%",
             display: "flex",
             flexDirection: "column",

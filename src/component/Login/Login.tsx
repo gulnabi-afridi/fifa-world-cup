@@ -42,9 +42,13 @@ const Login: React.FC = () => {
         width: "100vw",
         minHeight: "100vh",
         display: "flex",
-        background: "#1E1E1E",
+        py:4,
+        // background: "#1E1E1E",
+        background: "black",
         justifyContent: "center",
         alignItems: "center",
+        px: { sm: 0, xs: 1 },
+
       }}
     >
       <Box
@@ -55,6 +59,8 @@ const Login: React.FC = () => {
           background: "black",
           p: "6px",
           borderRadius: "30px",
+          borderTop: "2px solid #B3D355 ",
+          borderBottom:"2px solid #B3D355",
         }}
       >
         <Box
@@ -101,13 +107,14 @@ const Login: React.FC = () => {
               sx={{
                 position: "relative",
                 cursor: "pointer",
+                overflow: "hidden",
                 my: 3,
+                borderRadius: "50%",
                 "& input": {
                   display: "none",
                 },
               }}
             >
-              {/* <Image src={`/${image}`} width={40} height={40} alt=""></Image> */}
               <Box
                 sx={{
                   width: "180px",
@@ -118,32 +125,24 @@ const Login: React.FC = () => {
                   "& img": {
                     borderRadius: "50%",
                   },
+                  backgroundImage: "url(/Assets/profile.jpg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
                 }}
-              >
-                <Image
-                  src="/Assets/profile.jpg"
-                  fill
-                  alt="profile image"
-                  className="cover"
-                ></Image>
-              </Box>
+              ></Box>
               {/* =======>profile semi circle */}
               <Box
-                className="polygon"
                 sx={{
                   position: "absolute",
-                  // width: "130px",
-                  // height: "35px",
-                  bottom: "-58px",
-                  left: "-25px",
-                  // background: "red",
-                  // borderRadius: "0rem 0rem 10rem 10rem",
+                  bottom: "-60px",
+                  left: "-27px",
                 }}
               >
                 <Image
                   src="/Assets/profileStyle1.png"
-                  width={250}
-                  height={150}
+                  width={257}
+                  height={160}
                   alt=""
                 ></Image>
               </Box>
