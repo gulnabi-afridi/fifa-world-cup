@@ -36,7 +36,12 @@
 }
 .MuiFilledInput-root {
   height: 64px !important;
-}
+  border-radius: 20px !important;
+  border-bottom: none !important;
+  }
+  .MuiFilledInput-root:focus{
+    border-bottom: 0px !important;
+  }
 
 .MuiFormControl-root {
   border-radius: 20px !important;

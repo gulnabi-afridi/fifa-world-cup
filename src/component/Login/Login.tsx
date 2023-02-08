@@ -42,13 +42,11 @@ const Login: React.FC = () => {
         width: "100vw",
         minHeight: "100vh",
         display: "flex",
-        py:4,
-        // background: "#1E1E1E",
+        py: 4,
         background: "black",
         justifyContent: "center",
         alignItems: "center",
-        px: { sm: 0, xs: 1 },
-
+        px: { xs: "6px", sm: 0 },
       }}
     >
       <Box
@@ -60,7 +58,7 @@ const Login: React.FC = () => {
           p: "6px",
           borderRadius: "30px",
           borderTop: "2px solid #B3D355 ",
-          borderBottom:"2px solid #B3D355",
+          borderBottom: "2px solid #B3D355",
         }}
       >
         <Box
@@ -163,6 +161,7 @@ const Login: React.FC = () => {
                 gap: 2,
                 justifyContent: "center",
                 alignItems: "center",
+                overflow: "hidden",
               }}
             >
               {loginInput.map((inpt, index) => {
@@ -177,6 +176,7 @@ const Login: React.FC = () => {
                         fontFamily: "Inter, sans-serif !important",
                         margin: "0px 15px",
                         fontWeight: "700",
+                        borderBottom: "none",
                       },
                     }}
                     id="filled-basic"

@@ -47,7 +47,7 @@ const GroupPage: React.FC = () => {
         justifyContent: "center",
         alignItems: "center",
         py: 4,
-        px: { sm: 0, xs: 2 },
+        px: { xs: "6px", sm: 0 },
       }}
     >
       <Box

@@ -46,7 +46,7 @@ const CreateGroup: React.FC = () => {
         background: "black",
         justifyContent: "center",
         alignItems: "center",
-        px: { sm: 0, xs: 1 },
+        px: { xs: "6px", sm: 0 },
 
       }}
     >

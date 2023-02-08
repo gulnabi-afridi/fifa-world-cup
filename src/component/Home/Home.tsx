@@ -13,12 +13,11 @@ const Home: React.FC = () => {
         width: "100vw",
         minHeight: "100vh",
         display: "flex",
-        // background: "#1E1E1E",
         background: "black",
         justifyContent: "center",
         alignItems: "center",
         py: 4,
-        px: { sm: 0, xs: 1 },
+        px: { xs: "6px", sm: 0 },
       }}
     >
       <Box
@@ -214,11 +213,13 @@ const Home: React.FC = () => {
           <Typography
             sx={{
               fontSize: "12px",
+              width:"fit-content",
               fontWeight: "500",
               fontFamily: "Inter,sans-serif",
               color: "white",
               background: "#353535",
-              p: 0.5,
+              borderRadius:"6px",
+              p: 1,
             }}
           >
             Preview Matches
