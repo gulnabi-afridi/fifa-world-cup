@@ -47,7 +47,6 @@ const CreateGroup: React.FC = () => {
         justifyContent: "center",
         alignItems: "center",
         px: { xs: "6px", sm: 0 },
-
       }}
     >
       <Box
@@ -69,7 +68,7 @@ const CreateGroup: React.FC = () => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "30px",
-            p: 2,
+            p: 1,
             py: 8,
             background:
               "linear-gradient(180deg, #110F72 0%, #2B2A81 82.99%, #444291 100%)",

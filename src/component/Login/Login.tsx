@@ -191,8 +191,8 @@ const Login: React.FC = () => {
               <PrimaryButton
                 navigate={Navigate}
                 title="Next"
-                paddLeft={7}
-                paddRight={4}
+                paddLeft={6}
+                paddRight={3}
                 icon={<EastIcon sx={{ color: "white", fontSize: "40px" }} />}
               ></PrimaryButton>
             </Box>

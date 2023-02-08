@@ -25,8 +25,8 @@ const PrimaryButton: React.FC<Props> = ({
         justifyContent: "center",
         alignItems: "center",
         background: "linear-gradient(0deg, #A161D4, #A161D4)",
-        pr: { paddRight },
-        pl: { paddLeft },
+        pr:  paddRight ,
+        pl: paddLeft ,
         py: 1.2,
         borderRadius: "30px",
       }}

@@ -26,22 +26,18 @@
   border-radius: 5px !important;
 }
 /* ======> login global style */
-.polygon {
-}
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after {
+
+.MuiInputBase-root::after {
   border-bottom: 0px !important;
 }
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:before {
+.MuiInputBase-root::before {
   border-bottom: 0px !important;
 }
 .MuiFilledInput-root {
   height: 64px !important;
   border-radius: 20px !important;
   border-bottom: none !important;
-  }
-  .MuiFilledInput-root:focus{
-    border-bottom: 0px !important;
-  }
+}
 
 .MuiFormControl-root {
   border-radius: 20px !important;
@@ -49,9 +45,6 @@
 .MuiFormControl-root label {
   padding: 0px 10px !important;
   color: #828282 !important;
-}
-.css-v4u5dn-MuiInputBase-root-MuiInput-root:after{
-  border-bottom: 0px !important;
 }
 
 /* font-family: 'Inter', sans-serif; */

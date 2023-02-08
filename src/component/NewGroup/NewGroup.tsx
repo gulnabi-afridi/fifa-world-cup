@@ -44,7 +44,7 @@ const NewGroup: React.FC = () => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "30px",
-            p: 3,
+            p: 2,
             py: 8,
             boxShadow: 4,
             background:
@@ -118,8 +118,8 @@ const NewGroup: React.FC = () => {
               <PrimaryButton
                 navigate={Navigate}
                 title="New Group"
-                paddLeft={0}
-                paddRight={0}
+                paddLeft={6}
+                paddRight={3}
               ></PrimaryButton>
             </Box>
           </Box>
