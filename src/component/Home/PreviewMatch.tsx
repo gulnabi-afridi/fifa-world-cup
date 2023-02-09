@@ -152,7 +152,7 @@ const PreviewMatch: React.FC<props> = ({ bgColor }: props) => {
           px: 3.5,
           position: "absolute",
           top: "-10px",
-          left: "40%",
+          left: "39%",
         }}
       >
         <Typography

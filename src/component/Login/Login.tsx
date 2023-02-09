@@ -13,10 +13,22 @@ import { useRouter } from "next/router";
 const Login: React.FC = () => {
   // =====>states
   const [image, Set_Image] = useState("");
+  const [First_Name, Set_First_Name] = useState("");
+  const [Last_Name, Set_Last_Name] = useState("");
+
   const inputRef: any = useRef(null);
   const Router = useRouter();
 
   // ========>functions
+
+  const UpdateFirstName = (e: any) => {
+    Set_First_Name(e.target.value);
+  };
+
+  const UpdateLastName = (e: any) => {
+    Set_Last_Name(e.target.value);
+  };
+
   const handleClick = (event: any) => {
     inputRef.current.click();
   };
@@ -31,6 +43,21 @@ const Login: React.FC = () => {
   };
 
   // ==========>functions ends here
+
+  // =======> input form object
+  const loginInput = [
+    {
+      label: "First Name",
+      state: First_Name,
+      SetState: UpdateFirstName,
+    },
+    {
+      label: "Last Name",
+      state: Last_Name,
+      SetState: UpdateLastName,
+    },
+  ];
+  // ========> input from object end here
 
   return (
     <Box
@@ -90,8 +117,6 @@ const Login: React.FC = () => {
                 fontFamily: "Inter, sans-serif",
                 color: "white",
                 fontSize: "24px",
-
-                //   fontWeight: "500",
               }}
             >
               Create your Profile
@@ -178,8 +203,10 @@ const Login: React.FC = () => {
                         borderBottom: "none",
                       },
                     }}
-                    id="filled-basic"
+                    id={inpt.label}
                     label={inpt.label}
+                    value={inpt.state}
+                    onChange={inpt.SetState}
                     variant="filled"
                   />
                 );
@@ -213,14 +240,5 @@ const Login: React.FC = () => {
     </Box>
   );
 };
-
-const loginInput = [
-  {
-    label: "First Name",
-  },
-  {
-    label: "Last Name",
-  },
-];
 
 export default Login;

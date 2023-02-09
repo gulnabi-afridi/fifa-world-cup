@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/system";
 import Image from "next/image";
 import { Typography } from "@mui/material";
@@ -8,11 +8,72 @@ import PrimaryButton from "../common/PrimaryButton";
 import Router, { useRouter } from "next/router";
 
 const Register: React.FC = () => {
+  // ======> States
+  const [NickName, Set_NickName] = useState("");
+  const [PhoneNumber, Set_PhoneNumber] = useState("");
+  const [Email, Set_Email] = useState("");
+  const [Password, Set_Password] = useState("");
+  const [RePassword, Set_RePassword] = useState("");
+
   const Router = useRouter();
+
+  // =========>functions
+  const UpdateNickName = (e: any) => {
+    Set_NickName(e.target.value);
+  };
+  const UpdatePhoneNumber = (e: any) => {
+    Set_PhoneNumber(e.target.value);
+  };
+  const UpdateEmail = (e: any) => {
+    Set_Email(e.target.value);
+  };
+  const UpdatePassword = (e: any) => {
+    Set_Password(e.target.value);
+  };
+  const UpdateRePassword = (e: any) => {
+    Set_RePassword(e.target.value);
+  };
 
   const Navigate = () => {
     Router.push("/new-group");
   };
+
+  // ========> functions end here
+
+  //=======>Register input objects
+  const registerInput = [
+    {
+      label: "Nickname",
+      type: "text",
+      state: NickName,
+      SetState: UpdateNickName,
+    },
+    {
+      label: "Phone Number",
+      type: "text",
+      state: PhoneNumber,
+      SetState: UpdatePhoneNumber,
+    },
+    {
+      label: "Email",
+      type: "text",
+      state: Email,
+
+      SetState: UpdateEmail,
+    },
+    {
+      label: "Password",
+      type: "text",
+      state: Password,
+      SetState: UpdatePassword,
+    },
+    {
+      label: "Re-Password",
+      type: "password",
+      state: RePassword,
+      SetState: UpdateRePassword,
+    },
+  ];
 
   return (
     <Box
@@ -105,7 +166,9 @@ const Register: React.FC = () => {
                         fontWeight: "700",
                       },
                     }}
-                    id="filled-basic"
+                    id={inpt.label}
+                    value={inpt.state}
+                    onChange={inpt.SetState}
                     label={inpt.label}
                     variant="filled"
                   />
@@ -165,28 +228,5 @@ const Register: React.FC = () => {
     </Box>
   );
 };
-
-const registerInput = [
-  {
-    label: "Nickname",
-    type: "text",
-  },
-  {
-    label: "Phone Number",
-    type: "text",
-  },
-  {
-    label: "Email",
-    type: "text",
-  },
-  {
-    label: "Password",
-    type: "text",
-  },
-  {
-    label: "Re-Password",
-    type: "password",
-  },
-];
 
 export default Register;
