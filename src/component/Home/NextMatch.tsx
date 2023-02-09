@@ -69,7 +69,7 @@ const NextMatch: React.FC = () => {
             style={{
               height: "50px",
               width: "50px",
-              paddingLeft: "2px",
+              paddingLeft: "6px",
               fontFamily: "Inter, sans-serif",
               fontSize: "14px",
               fontWeight: "500",
@@ -81,7 +81,7 @@ const NextMatch: React.FC = () => {
           />
           <Typography
             sx={{
-              fontSize: "14px",
+              fontSize: { sm: "14px", xs: "12px" },
               fontWeight: "500",
               fontFamily: "Inter, sans-serif",
               background: "#7314BE",
@@ -119,7 +119,7 @@ const NextMatch: React.FC = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: "14px",
+              fontSize: { sm: "14px", xs: "12px" },
               fontWeight: "500",
               fontFamily: "Inter, sans-serif",
               background: "#7314BE",
@@ -147,11 +147,11 @@ const NextMatch: React.FC = () => {
             style={{
               height: "50px",
               width: "50px",
-              paddingLeft: "2px",
               fontFamily: "Inter, sans-serif",
               fontSize: "14px",
               fontWeight: "500",
               marginTop: "12px",
+              paddingLeft: "6px",
             }}
             type="text"
             id="first"
@@ -159,7 +159,7 @@ const NextMatch: React.FC = () => {
           />
           <Typography
             sx={{
-              fontSize: "14px",
+              fontSize: { sm: "14px", xs: "12px" },
               fontWeight: "500",
               fontFamily: "Inter, sans-serif",
               background: "#7314BE",

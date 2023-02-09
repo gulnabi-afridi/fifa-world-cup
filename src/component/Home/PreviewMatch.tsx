@@ -2,16 +2,21 @@ import React from "react";
 import Image from "next/image";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import RemoveIcon from "@mui/icons-material/Remove";
 
-const PreviewMatch: React.FC = () => {
+interface props {
+  bgColor?: string;
+}
+
+
+
+const PreviewMatch: React.FC<props> = ({ bgColor }: props) => {
   return (
     <Box
       sx={{
         width: "100%",
-        display:"grid",
-        gridTemplateColumns:"1fr 1fr 1fr",
-        justifyContent:"center", 
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
+        justifyContent: "center",
         alignItems: "center",
         background: "#353535",
         borderRadius: "15px",
@@ -23,7 +28,7 @@ const PreviewMatch: React.FC = () => {
       {/* ====>one team */}
       <Box
         sx={{
-          height:"100%",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -50,7 +55,7 @@ const PreviewMatch: React.FC = () => {
       {/* =====>score */}
       <Box
         sx={{
-          height:"100%",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -63,8 +68,7 @@ const PreviewMatch: React.FC = () => {
             gap: 1,
             justifyContent: "center",
             alignItems: "center",
-            mt:4,
-            
+            mt: 4,
           }}
         >
           <Typography
@@ -143,7 +147,7 @@ const PreviewMatch: React.FC = () => {
           gap: 0.5,
           alignItems: "center",
           borderRadius: "15px",
-          background: "#1BE22F",
+          background: `${bgColor ? bgColor  :"#1BE22F"}`,
           py: 0.5,
           px: 3.5,
           position: "absolute",

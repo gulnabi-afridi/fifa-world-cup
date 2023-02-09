@@ -213,12 +213,12 @@ const Home: React.FC = () => {
           <Typography
             sx={{
               fontSize: "12px",
-              width:"fit-content",
+              width: "fit-content",
               fontWeight: "500",
               fontFamily: "Inter,sans-serif",
               color: "white",
               background: "#353535",
-              borderRadius:"6px",
+              borderRadius: "6px",
               p: 1,
             }}
           >
@@ -237,7 +237,7 @@ const Home: React.FC = () => {
           </Typography>
           {/* ========> Each preview matches */}
           <PreviewMatch />
-          <PreviewMatch />
+          <PreviewMatch bgColor="red" />
         </Box>
         {/* ============> Next Matches */}
         <Box

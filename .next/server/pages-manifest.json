@@ -2,5 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/login": "pages/login.js",
+  "/register": "pages/register.js",
+  "/new-group": "pages/new-group.js",
+  "/group-page": "pages/group-page.js",
+  "/create-group": "pages/create-group.js",
   "/": "pages/index.js"
 }

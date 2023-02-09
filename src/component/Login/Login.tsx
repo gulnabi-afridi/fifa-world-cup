@@ -22,12 +22,8 @@ const Login: React.FC = () => {
   };
 
   const handleFileChange = (event: any) => {
-    const fileObj = event.target.files && event.target.files[0];
-    Set_Image(fileObj.name);
+    Set_Image(URL.createObjectURL(event.target.files[0]));
     console.log(image);
-    if (!fileObj) {
-      return;
-    }
   };
 
   const Navigate = () => {
@@ -75,6 +71,7 @@ const Login: React.FC = () => {
         >
           {/* =======> back icon */}
           <ArrowBackIosNewIcon
+            onClick={() => Router.push("/")}
             sx={{ color: "white", fontSize: "30px", m: 3, cursor: "pointer" }}
           />
           <Box
@@ -123,7 +120,9 @@ const Login: React.FC = () => {
                   "& img": {
                     borderRadius: "50%",
                   },
-                  backgroundImage: "url(/Assets/profile.jpg)",
+                  backgroundImage: `${
+                    image === "" ? "url(/Assets/profile.jpg)" : `url(${image})`
+                  }`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   backgroundSize: "cover",
